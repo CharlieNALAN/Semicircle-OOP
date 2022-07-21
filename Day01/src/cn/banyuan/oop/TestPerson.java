@@ -7,5 +7,6 @@ public class TestPerson {
         p.name="aaa";
         p.show();
         System.out.println(p);
+        System.out.println(p);
     }
 }
