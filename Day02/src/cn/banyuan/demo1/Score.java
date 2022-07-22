@@ -1,4 +1,4 @@
-package cn.banyuan.practice1;
+package cn.banyuan.demo1;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package cn.banyuan.practice1;
+package cn.banyuan.demo1;
 
 public class TestScore {
     public static void main(String[] args) {

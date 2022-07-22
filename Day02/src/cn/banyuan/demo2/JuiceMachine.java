@@ -1,4 +1,4 @@
-package cn.banyuan.practice2;
+package cn.banyuan.demo2;
 
 public class JuiceMachine {
     public String zha(String fruit,int num){
