@@ -1,4 +1,4 @@
-package cn.banyuan.homework1_2;
+package cn.banyuan.homework1;
 
 public class StudentTest {
     public static void main(String[] args) {
