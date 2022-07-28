@@ -18,7 +18,6 @@ public class Printer implements InkBox,Paper{
     public void paper() {
         System.out.println("设置纸张为"+this.paper);
     }
-
     public void info(){
         setInk();
         paper();
