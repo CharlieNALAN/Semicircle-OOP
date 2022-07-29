@@ -11,11 +11,9 @@ public class Practice1 {
             int a = sc.nextInt();
             System.out.println(tmp[a-1]);
 
-        }catch (IndexOutOfBoundsException e){
+        } catch (Exception e){
             e.printStackTrace();
-        }catch (Exception e){
-            e.printStackTrace();
-        }finally {
+        } finally {
             System.out.println("欢迎提出建议");
         }
     }
