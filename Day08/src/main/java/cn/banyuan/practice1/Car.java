@@ -1,4 +1,4 @@
-package cn.banyuanpractice1;
+package cn.banyuan.practice1;
 
 public final class Car extends MotorVehicle{
     public Car( String name, String brand, int rent) {
