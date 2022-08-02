@@ -21,6 +21,6 @@ public class BasePlusSalesEmployee extends SalesEmployee{
 
     @Override
     public double getSalary(int month) {
-        return super.getSalary(month)+baseSalary;
+        return super.getSalary(month)+baseSalary+1000;
     }
 }

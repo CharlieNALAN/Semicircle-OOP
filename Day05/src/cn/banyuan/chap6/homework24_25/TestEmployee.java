@@ -15,5 +15,16 @@ public class TestEmployee {
         for(int i=0;i<4;i++){
             System.out.println("salary="+team[i].getSalary(4));
         }
+        System.out.println("公司共发放了"+total(team)+"元");
+    }
+
+
+    public static double total(Employee[] t){
+        double sum=0;
+        for(int i=0;i<t.length;i++){
+            sum+=t[i].getSalary(3);
+        }
+        return sum;
+
     }
 }

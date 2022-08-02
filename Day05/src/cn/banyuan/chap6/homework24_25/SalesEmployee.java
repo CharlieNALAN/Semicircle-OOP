@@ -31,6 +31,6 @@ public class SalesEmployee extends Employee{
 
     @Override
     public double getSalary(int month) {
-        return super.getSalary(month)+sales*rate;
+        return super.getSalary(month)+sales*rate+2000;
     }
 }
