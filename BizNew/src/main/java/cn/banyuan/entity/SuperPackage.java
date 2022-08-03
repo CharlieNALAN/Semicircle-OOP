@@ -9,9 +9,16 @@ public class SuperPackage extends ServicePackage implements CallService, SendSer
     public int smsCount;
     public int flow;
 
+    public SuperPackage() {
+        price = 78;
+        talkTime = 200;
+        flow = 1;
+        smsCount = 50;
+    }
+
     @Override
     public void showInfo() {
-
+        System.out.println("超人套餐：通话时长200分钟/月，流量1G/月,短信50条/月" );
     }
 
     @Override

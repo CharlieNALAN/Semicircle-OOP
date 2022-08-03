@@ -1,11 +1,11 @@
 package cn.banyuan.biz;
 
+import cn.banyuan.entity.*;
 import cn.banyuan.tools.CardUtil;
 
 import java.util.Scanner;
 
 public class Menu {
-
     Scanner sc = new Scanner(System.in);
     CardUtil tool;
 
@@ -27,9 +27,6 @@ public class Menu {
                     if(tool.isExistCard(number)){
                         System.out.print("请输入密码：");
                         String password = sc.next();
-//                        if(tool.isExistCard(number,password)){
-//                            menu1();
-//                        }
                         while(!tool.isExistCard(number,password)){
                             System.out.print("密码错误重新输入：");
                             password = sc.next();
@@ -39,7 +36,7 @@ public class Menu {
                         System.out.println("手机号不存在");
                     break;
                 case 2:
-                    System.out.println("运行用户注册");
+                    menu2();
                     break;
                 case 3:
                     System.out.println("运行使用嗖嗖");
@@ -51,8 +48,8 @@ public class Menu {
                     System.out.println("运行资费说明");
                     break;
                 case 6:
-                    System.out.println("运行退出系统");
-                    break;
+                    System.out.println("谢谢使用");
+                    return;
             }
         }while (true);
 
@@ -90,5 +87,56 @@ public class Menu {
         }while(true);
     }
 
+    public void menu2(){
+        String[] num = tool.getNewNumbers(9);
+        System.out.println("****可选择的卡号****");
+        for(int i=0;i<9;i++){
+            System.out.print((i+1)+"."+num[i]+"\t");
+            if((i+1)%3==0)
+                System.out.println();
+        }
+        MobileCard newCard = new MobileCard();     //新电话卡
+        System.out.print("请选择卡号：");
+        int cardChoice = sc.nextInt();
+        while(cardChoice<1||cardChoice>9){
+            System.out.println("输入有误，重新输入");
+            cardChoice = sc.nextInt();
+        }
+        System.out.print("1.话痨套餐  2.网虫套餐  3.超人套餐  请选择套餐：");
+        ServicePackage sp = null;                 //套餐选择
+        int packageChoice = sc.nextInt();
+        switch(packageChoice){
+            case 1:
+                sp = new TalkPackage();
+                break;
+            case 2:
+                sp = new NetPackage();
+                break;
+            case 3:
+            default:
+                sp = new SuperPackage();
+                break;
+        }
+        String number = num[cardChoice-1];  //电话号码
+        System.out.print("请输入姓名:");
+        String name = sc.next();            //名字
+        System.out.print("请输入密码：");
+        String pwd = sc.next();             //密码
+        System.out.print("请输入预存话费金额：");
+        double money = sc.nextDouble();
+        while(money<sp.price){
+            System.out.print("预留话费不足本月固定套餐，重新输入:");
+            money = sc.nextDouble();
+        }
+        money-= sp.getPrice();
+        newCard.setUserName(name);
+        newCard.setPassWord(pwd);
+        newCard.setMoney(money);
+        newCard.setCardNumber(number);
+        newCard.setSerPackage(sp);
+        tool.addCard(newCard);
+        System.out.println("注册成功！卡号："+number+"  用户名："+name+"  当前余额："+money+"元。");
+        sp.showInfo();
+    }
 
 }

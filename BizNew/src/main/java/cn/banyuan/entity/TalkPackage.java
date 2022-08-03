@@ -7,6 +7,12 @@ public class TalkPackage extends ServicePackage implements CallService, SendServ
     public int talkTime;
     public int smsCount;
 
+    public TalkPackage() {
+        price = 58;
+        talkTime = 500;
+        smsCount = 30;
+    }
+
     @Override
     public void showInfo() {
         /**/

@@ -6,11 +6,13 @@ import cn.banyuan.entity.MobileCard;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 public class CardUtil {
     Map<String, MobileCard> cards;
     Map<String, List<ConsumInfo>> consumInfos;
 
+    Random random = new Random();
     public void initScene(){
         cards = new HashMap<>();
         consumInfos = new HashMap<>();
@@ -27,17 +29,24 @@ public class CardUtil {
     }
 
     public String creatNumber(){
-
-        return null;
+        StringBuilder ans = new StringBuilder("139");
+        for(int i=0;i<8;i++){
+            int num = random.nextInt(10);
+            ans.append(num);
+        }
+        return ans.toString();
     }
 
     public String[] getNewNumbers(int count){
-
-        return new String[0];
+        String[] ans = new String[count];
+        for(int i=0;i<ans.length;i++){
+            ans[i]=creatNumber();
+        }
+        return ans;
     }
 
     public void addCard(MobileCard card){
-
+        cards.put(card.getCardNumber(),card);
     }
 
     public void delCard(String number){
