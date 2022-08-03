@@ -26,7 +26,7 @@ public class TestGoldBach {
         MathTool mt = new MathToolImpl();
         for(int i = 2; i<=n/2; i++){
             if (mt.isPrime(i) && mt.isPrime(n - i)){
-                System.out.println(n + "=" + i + "+" + (n - i));
+                System.out.println(n+"="+ i+"+"+(n-i));
             }
         }
     }
