@@ -1,3 +1,5 @@
+package cn.banyuan.entity;
+
 public class MobileCard {
     public String cardNumber;
     public String userName;
