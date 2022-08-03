@@ -11,6 +11,15 @@ public class MobileCard {
     public int realSMSCount;
     public int realFlow;
 
+    public MobileCard() {
+    }
+
+    public MobileCard(String cardNumber, String userName, String passWord) {
+        this.cardNumber = cardNumber;
+        this.userName = userName;
+        this.passWord = passWord;
+    }
+
     public void showMeg(){
 
     }

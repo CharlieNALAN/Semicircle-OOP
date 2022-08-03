@@ -14,15 +14,16 @@ public class CardUtil {
     public void initScene(){
         cards = new HashMap<>();
         consumInfos = new HashMap<>();
+        MobileCard t1 = new MobileCard("13900000000", "aaa", "123");
+        cards.put("13900000000",t1);
     }
 
     public boolean isExistCard(String number, String password){
-
-        return false;
+        return cards.containsKey(number) && cards.get(number).getPassWord().equals(password);
     }
 
     public boolean isExistCard(String number){
-        return true;
+        return cards.containsKey(number);
     }
 
     public String creatNumber(){
