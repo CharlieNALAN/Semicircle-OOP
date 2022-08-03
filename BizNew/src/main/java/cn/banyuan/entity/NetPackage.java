@@ -7,7 +7,7 @@ public class NetPackage extends ServicePackage implements NetService {
 
     public NetPackage() {
         price = 68;
-        flow = 3;
+        flow = 1024*3;
     }
 
     @Override

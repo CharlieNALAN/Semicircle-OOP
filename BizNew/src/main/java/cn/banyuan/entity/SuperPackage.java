@@ -12,7 +12,7 @@ public class SuperPackage extends ServicePackage implements CallService, SendSer
     public SuperPackage() {
         price = 78;
         talkTime = 200;
-        flow = 1;
+        flow = 1024;
         smsCount = 50;
     }
 

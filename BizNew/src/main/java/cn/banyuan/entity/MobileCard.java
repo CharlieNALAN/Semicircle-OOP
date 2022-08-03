@@ -7,9 +7,9 @@ public class MobileCard {
     public ServicePackage serPackage;
     public double consumAmount;
     public double money;
-    public int realTalkTime;
-    public int realSMSCount;
-    public int realFlow;
+    public int realTalkTime=0;
+    public int realSMSCount=0;
+    public int realFlow=0;
 
     public MobileCard() {
     }

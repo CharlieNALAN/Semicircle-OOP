@@ -31,7 +31,7 @@ public class Menu {
                             System.out.print("密码错误重新输入：");
                             password = sc.next();
                         }
-                        menu1();
+                        menu1(number);
                     }else
                         System.out.println("手机号不存在");
                     break;
@@ -55,7 +55,7 @@ public class Menu {
 
     }
 
-    public void menu1(){
+    public void menu1(String number){
         do{
             System.out.println("*****嗖嗖移动用户菜单*****");
             System.out.println("1.本月账单查询");
@@ -67,10 +67,12 @@ public class Menu {
             int choice = sc.nextInt();
             switch (choice){
                 case 1:
-                    System.out.println("运行本月账单查询");
+                    System.out.println("****本月账单查询****");
+                    tool.billQuery(number);
                     break;
                 case 2:
-                    System.out.println("运行套餐余量查询");
+//                    System.out.println("运行套餐余量查询");
+
                     break;
                 case 3:
                     System.out.println("运行打印消费详情");
@@ -134,9 +136,9 @@ public class Menu {
         newCard.setMoney(money);
         newCard.setCardNumber(number);
         newCard.setSerPackage(sp);
+        newCard.setConsumAmount(sp.price);
         tool.addCard(newCard);
         System.out.println("注册成功！卡号："+number+"  用户名："+name+"  当前余额："+money+"元。");
         sp.showInfo();
     }
-
 }
