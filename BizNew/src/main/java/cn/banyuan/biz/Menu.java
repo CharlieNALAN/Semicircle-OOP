@@ -71,11 +71,10 @@ public class Menu {
                     tool.billQuery(number);
                     break;
                 case 2:
-//                    System.out.println("运行套餐余量查询");
-
+                    tool.showRemainDetail(number);
                     break;
                 case 3:
-                    System.out.println("运行打印消费详情");
+                    tool.printConsumInfo(number);
                     break;
                 case 4:
                     System.out.println("运行套餐变更");
@@ -105,7 +104,7 @@ public class Menu {
             cardChoice = sc.nextInt();
         }
         System.out.print("1.话痨套餐  2.网虫套餐  3.超人套餐  请选择套餐：");
-        ServicePackage sp = null;                 //套餐选择
+        ServicePackage sp ;                 //套餐选择
         int packageChoice = sc.nextInt();
         switch(packageChoice){
             case 1:
