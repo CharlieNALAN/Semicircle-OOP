@@ -39,7 +39,7 @@ public class Menu {
                     menu2();
                     break;
                 case 3:
-                    System.out.println("运行使用嗖嗖");
+                    menu3();
                     break;
                 case 4:
                     System.out.println("运行话费充值");
@@ -144,5 +144,6 @@ public class Menu {
     public void menu3(){
         System.out.print("请输入手机卡号:");
         String number = sc.next();
+
     }
 }

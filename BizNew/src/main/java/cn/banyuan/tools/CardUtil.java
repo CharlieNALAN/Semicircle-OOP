@@ -9,9 +9,11 @@ public class CardUtil {
     Map<String, MobileCard> cards;
     Map<String, List<ConsumInfo>> consumInfos;
 
-    Scene[] scenes = new Scene[6];
+    public Scene[] scenes = new Scene[3];
     public CardUtil() {
-
+        scenes[0] = new Scene("发短信50条",50,50);
+        scenes[1] = new Scene("打电话100分钟",100,100);
+        scenes[2] = new Scene("上网50分钟",1024,50);
     }
 
     Random random = new Random();
@@ -118,6 +120,8 @@ public class CardUtil {
     }
 
     public void useSoso(String number){
+        Random random = new Random();
+        int choice = random.nextInt(3);
 
     }
 
