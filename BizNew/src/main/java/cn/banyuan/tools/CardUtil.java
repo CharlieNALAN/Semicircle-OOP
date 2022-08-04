@@ -9,6 +9,11 @@ public class CardUtil {
     Map<String, MobileCard> cards;
     Map<String, List<ConsumInfo>> consumInfos;
 
+    Scene[] scenes = new Scene[6];
+    public CardUtil() {
+
+    }
+
     Random random = new Random();
     public void initScene(){
         cards = new HashMap<>();

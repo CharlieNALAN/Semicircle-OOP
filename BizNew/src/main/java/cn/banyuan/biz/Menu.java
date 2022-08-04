@@ -140,4 +140,9 @@ public class Menu {
         System.out.println("注册成功！卡号："+number+"  用户名："+name+"  当前余额："+money+"元。");
         sp.showInfo();
     }
+
+    public void menu3(){
+        System.out.print("请输入手机卡号:");
+        String number = sc.next();
+    }
 }
