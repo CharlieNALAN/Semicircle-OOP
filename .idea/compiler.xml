@@ -14,9 +14,5 @@
     <bytecodeTargetLevel>
       <module name="Biz" target="1.8" />
     </bytecodeTargetLevel>
-    <bytecodeTargetLevel>
-      <module name="Biz" target="1.8" />
-      <module name="Day09" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
